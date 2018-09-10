@@ -2,7 +2,7 @@ plugins:
     mec:
         executor: central_deployment_agent
         install: false
-        #source: https://github.com/tomahkvt/aws-get-vpn-connection-info/raw/master/aws_get_vpn_connection_info.zip
+        source: https://github.com/tomahkvt/mec-plugin-cloudify/raw/master/mec-plugin-cloudify.zip
         package_name: mec-plugin-cloudify
         package_version: '0.0.2'
 
