@@ -37,14 +37,14 @@ node_types:
     interfaces:
       cloudify.interfaces.lifecycle:
         start:
-          implementation: mec-plugin-cloudify.mec-plugin-cloudify.tasks.redirect_by_name
+          implementation: mec-plugin-cloudify.mec_plugin_cloudify.tasks.redirect_by_name
           inputs:
             start_retry_interval:
               description: Polling interval until the server is active in seconds
               type: integer
               default: 30
         stop:
-          implementation: mec-plugin-cloudify.mec-plugin-cloudify.tasks.delete_redirect_by_name
+          implementation: mec-plugin-cloudify.mec_plugin_cloudify.tasks.delete_redirect_by_name
           inputs:
             start_retry_interval:
               description: Polling interval until the server is active in seconds
