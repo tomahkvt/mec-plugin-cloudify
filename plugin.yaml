@@ -3,8 +3,8 @@ plugins:
         executor: central_deployment_agent
         install: false
         #source: https://github.com/tomahkvt/aws-get-vpn-connection-info/raw/master/aws_get_vpn_connection_info.zip
-        package_name: mec
-        package_version: '0.1'
+        package_name: mec-plugin-cloudify
+        package_version: '0.0.2'
 
 node_types:
   cloudify.mec.rules.redirect_by_name:

@@ -29,3 +29,13 @@ if [ -f "$PLUGIN_NAME-$PLUGIN_TAG_NAME" ]; then
 fi
 
 tar -cvzf "$PLUGIN_TAG_NAME.tar.gz" "$PLUGIN_NAME-$PLUGIN_TAG_NAME"
+
+if [ -f "$PLUGIN_NAME.zip" ]; then
+  rm "$PLUGIN_NAME.zip"
+fi
+
+
+zip "$PLUGIN_NAME.zip" $PLUGIN_NAME_
+zip "$PLUGIN_NAME.zip" dev-requirements.txt
+zip "$PLUGIN_NAME.zip" plugin.yaml
+zip "$PLUGIN_NAME.zip" setup.py

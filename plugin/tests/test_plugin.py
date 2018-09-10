@@ -38,4 +38,5 @@ class TestPlugin(unittest.TestCase):
         # extract single node instance
         instance = cfy_local.storage.get_node_instances()[0]
 
+
         cfy_local.execute('uninstall', task_retries=0)
