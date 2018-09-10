@@ -23,8 +23,8 @@ from setuptools import setup
 setup(
 
     # Do not use underscores in the plugin name.
-    name='mec_plugin_cloudify',
-    version='0.0.2',
+    name='mec-plugin-cloudify',
+    version='0.0.3',
     author='Tomakh Konstantin',
     author_email='tomahkvt@gmail.com',
     description='A Cloudify plugin for MEC',

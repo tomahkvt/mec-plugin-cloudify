@@ -1,7 +1,7 @@
 #!/bin/bash
 shopt -s extglob
 PLUGIN_NAME=mec-plugin-cloudify
-PLUGIN_TAG_NAME=0.0.2
+PLUGIN_TAG_NAME=0.0.3
 PLUGIN_NAME_=${PLUGIN_NAME//-/_}
 if [ -d "$PLUGIN_NAME-$PLUGIN_TAG_NAME" ]; then
   rm -r "$PLUGIN_NAME-$PLUGIN_TAG_NAME"

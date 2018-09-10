@@ -81,7 +81,7 @@ source common-provision.sh
 #AWS_ACCESS_KEY_ID=$3
 #AWS_ACCESS_KEY=$4
 PLUGIN_NAME=mec-plugin-cloudify
-PLUGIN_TAG_NAME=0.0.2
+PLUGIN_TAG_NAME=0.0.3
 #PLUGIN_S3_FOLDER=$7
 
 export AWS_S3_BUCKET="cloudify-release-eu"
