@@ -16,7 +16,6 @@ def redirect_by_name(**kwargs):
     mec_platform_client.registrar_host = registrar_host
     mec_platform_client.registrar_port = registrar_port
     mec_platform_client.registrar_service_catalogue_url = registrar_service_catalogue_url
-
     msg = "Creating redirect by name"
     ctx.logger.info(msg)
 
@@ -83,9 +82,9 @@ def delete_redirect_by_name(**kwargs):
             msg = "Server " + mec_platform_client.registrar_host + \
                   " port " + str(mec_platform_client.registrar_port) + \
                   " connection timeout"
-            ctx.logger.info(msg)
-            raise NonRecoverableError(msg)
-        return
+            return ctx.operation.retry(message=msg)
+        else:
+            raise NonRecoverableError(str(e))
 
     response_dict = json.loads(response_str)
     response = response_dict['RESPONSE']
@@ -130,9 +129,9 @@ def redirect_by_traffic(**kwargs):
             msg = "Server " + mec_platform_client.registrar_host + \
                   " port " + str(mec_platform_client.registrar_port) + \
                   " connection timeout"
-            ctx.logger.info(msg)
-            raise NonRecoverableError(msg)
-        return
+            return ctx.operation.retry(message=msg)
+        else:
+            raise NonRecoverableError(str(e))
 
     response_dict = json.loads(response_str)
     response = response_dict['RESPONSE']
@@ -177,9 +176,9 @@ def delete_redirect_by_traffic(**kwargs):
             msg = "Server " + mec_platform_client.registrar_host + \
                   " port " + str(mec_platform_client.registrar_port) + \
                   " connection timeout"
-            ctx.logger.info(msg)
-            raise NonRecoverableError(msg)
-        return
+            return ctx.operation.retry(message=msg)
+        else:
+            raise NonRecoverableError(str(e))
 
     response_dict = json.loads(response_str)
     response = response_dict['RESPONSE']

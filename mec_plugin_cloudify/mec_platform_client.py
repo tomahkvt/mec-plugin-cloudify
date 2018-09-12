@@ -57,7 +57,8 @@ def get_service_endpoint(service_name):
 # Executes an HTTP requests and returns the body
 def exec_request(host, port, url, method = None, body = None):
   headers = {"Content-Type":"application/json"}
-
+  host = str(host)
+  port = str(port)
   if not method:
     method = "GET"
     
@@ -70,6 +71,8 @@ def exec_request(host, port, url, method = None, body = None):
   
   r = cnx.getresponse()
   #print r.status, r.reason
+  if r.status != 200:
+    raise Exception(str(r.status) + " "+ str(r.reason))
   return r.read()
   
 ##########################################

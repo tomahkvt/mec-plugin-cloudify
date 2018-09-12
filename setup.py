@@ -24,7 +24,7 @@ setup(
 
     # Do not use underscores in the plugin name.
     name='mec-plugin-cloudify',
-    version='0.0.3',
+    version='0.0.4',
     author='Tomakh Konstantin',
     author_email='tomahkvt@gmail.com',
     description='A Cloudify plugin for MEC',
