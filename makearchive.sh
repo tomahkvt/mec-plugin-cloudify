@@ -35,7 +35,7 @@ if [ -f "$PLUGIN_NAME_.zip" ]; then
 fi
 
 
-zip "$PLUGIN_NAME_.zip" $PLUGIN_NAME_
+zip -r "$PLUGIN_NAME_.zip" $PLUGIN_NAME_
 zip "$PLUGIN_NAME_.zip" dev-requirements.txt
 zip "$PLUGIN_NAME_.zip" plugin.yaml
 zip "$PLUGIN_NAME_.zip" setup.py

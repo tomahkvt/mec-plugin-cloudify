@@ -4,7 +4,7 @@ plugins:
         install: false
         source: https://github.com/tomahkvt/mec-plugin-cloudify/raw/master/mec_plugin_cloudify.zip
         package_name: mec-plugin-cloudify
-        package_version: '0.0.3'
+        package_version: '0.0.4'
 
 node_types:
   cloudify.mec.rules.redirect_by_name:
